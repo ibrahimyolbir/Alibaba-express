@@ -4,11 +4,11 @@ $(document).ready(function(){
 var cart = [];
 
 var products = [
-{
+{   
     name : "Samsung", 
     price : "2220:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    picture: 'img/samsungtv.png', 
+    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.", 
+    picture:'img/samsungtv.png',  
     category: 'elektronik' 
 },
 {   
@@ -88,7 +88,7 @@ for (var i = 0; i < products.length; i++) {
                 <div class="item_images">
                     <img src="${products[i].picture}" alt="">
                 </div>
-                <div class="item_desciraption">
+                <div class="item_description">
                     <h5>${products[i].name}</h5>
                     <p>${products[i].description}</p>
                 </div>
@@ -121,7 +121,7 @@ $(".add_item").click(function(){
 function displayCart() {
     cartText = " " ;
     for(var i=0; i < cart.length; i++ ) {
-        cartText += "<li><span class=\"name\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
+        cartText += "<li><span class=\"d\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
         +"</span> <span class=\"price\">" + cart[i].price + "</span>" + "<button id=\"" +i+ "\" class=\"done_item\" type=\"submit\">Done</button>" + 
         "<button id=\"" +i+ "\" class=\"delete_item\" type=\"submit\">Delete</button>" + "</li>";
     }
