@@ -98,7 +98,7 @@ for (var i = 0; i < products.length; i++) {
                             <p>${products[i].price}</p>
                         </div>
                     <div class="add_item col-sm-7">
-                        <button id="${i}"  type="submit">Lägg i Varukorg</button>
+                        <button class="add_item" id="${i}"  type="submit">Lägg i Varukorg</button>
                     </div>
                 </div>
                 </div>
@@ -121,7 +121,7 @@ $(".add_item").click(function(){
 function displayCart() {
     cartText = " " ;
     for(var i=0; i < cart.length; i++ ) {
-        cartText += "<li><span class=\"d\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
+        cartText += "<li><span class=\"name\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
         +"</span> <span class=\"price\">" + cart[i].price + "</span>" + "<button id=\"" +i+ "\" class=\"done_item\" type=\"submit\">Done</button>" + 
         "<button id=\"" +i+ "\" class=\"delete_item\" type=\"submit\">Delete</button>" + "</li>";
     }
