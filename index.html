@@ -5,12 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="elektronik,klader,toys,phones,sport,alibaba,shopping">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css\style.css">
     <title>Alibaba Express</title>
 </head>
 <body>
-    <header><h1>Alibaba Express E-handel</h1></header>
+    <header class="">
+        <div class="site_header">
+            <div style="float:left">
+                <a href="#home" class="w3-bar-item w3-button w3-wide">
+                    <img src="img\logo1.png" alt="" style="width:110px; margin:10%;">
+                </a>
+            </div>
+            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Search.." name="search2">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <div style="float:right">
+                <a href="#contact" class="w3-bar-item w3-button w3-right">
+                    <i class=""></i> Till Kassan</a>
+
+                    <a href="#contact" class="w3-bar-item w3-button w3-right" style="background-color:rgb(99, 154, 190)">
+                        </div>
+                        <div class="shopping_list">
+                            <ul class="cart_list">
+                            </ul>
+                      </div>
+                    <i class=""></i> KundVagn (0)</a>
+            </div>
+        </div>
+    
+    </header>
+    <div class="w3-top">
+            
+            </div>
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+             
+              
+              <!-- Right-sided navbar links -->
+              <div class="w3-left w3-hide-small" style="margin-left:150px">
+                <a href="#about" class="w3-bar-item w3-button">ELEKTRONIK</a>
+                <a href="#team" class="w3-bar-item w3-button"><i class=""></i>KLÄDER</a>
+                <a href="#work" class="w3-bar-item w3-button"><i class=""></i> LEKSAKER</a>
+                <a href="#pricing" class="w3-bar-item w3-button"><i class=""></i>PHONES </a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class=""></i> SPORT</a>
+                
+              </div>
+             
+              <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+          
+              <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Sidebar on small screens when clicking the menu icon -->
+          <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ELEKTRONIK</a>
+            <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">KLÄDER</a>
+            <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">LEKSAKER</a>
+            <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PHONES</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">SPORT</a>
+          </nav>  
     <section class="container_fuild">
         <div class="row">
             <div class="col-md-9 left_container">
@@ -27,21 +90,55 @@
 
 
     <div class="category electronic">
-            <h1>Products</h1>
+            <h1>ELEKTRONIK</h1>
         <div class="products">
 
         </div>
     </div>
-        <div class="shopping_list">
-            <h3>Varukorg</h3>
-            <ul class="cart_list">
-    
-            </ul>
+
+    <div class="category electronic">
+            <h1>KLÄDER</h1>
+        <div class="products">
+
+        </div>
+    </div>
+    <div class="category electronic">
+            <h1>LEK SAKER</h1>
+        <div class="products">
+
+        </div>
+    </div>
+    <div class="category electronic">
+            <h1>PHONES</h1>
+        <div class="products">
+
+        </div>
+    </div>
+    <div class="category electronic">
+            <h1>SPORT</h1>
+        <div class="products">
+
         </div>
     
+      <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+            <a href="#home" class="w3-bar-item w3-button w3-wide">
+                    <img src="img\logo1.png" alt="" style="width:180px; margin:0%;">
+                </a>
+                <div>
+
+
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+            <p class="w3-medium"> Copy 2018 Ibrahim Yolbir</p>
+        </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js\app.js"></script>
-
 </body>
 </html> 

@@ -24,14 +24,14 @@ var products = [
     price : "620:-", 
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     picture: 'img/nikeshoes.png',    
-    category: 'klader' 
+    category: 'elektronik' 
 },
 {
     name : "Adidas", 
     price : "120:-", 
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     picture: 'img/adidastshirt.png', 
-    category: 'klader' 
+    category: 'elektronik' 
 },
     
 {   
@@ -39,14 +39,14 @@ var products = [
     price : "520:-", 
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
     picture: 'img/lego_city.png', 
-    category: 'toys'
+    category: 'elektronik'
 },
 {   
     name : "Monopoly", 
     price : "320:-", 
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
     picture: 'img/monopoly.png', 
-    category: 'toys' 
+    category: 'elektronik' 
 },
     
 {   
@@ -54,29 +54,14 @@ var products = [
     price : "8920:-", 
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
     picture: 'img/iphone.png', 
-    category: 'phones'
+    category: 'elektronik'
 },
 {   
     name : "Asus", 
     price : "5220:-", 
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
     picture: 'img/asus.png', 
-    category: 'phones' 
-},
-    
-{   
-    name : "Craft Fleece Jacket", 
-    price : "2220:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    picture: 'img/jacket.png', 
-    category: 'sport' 
-},
-{   
-    name : "Salming Speed 3 Shoe", 
-    price : "2220:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    picture: 'img/shoe2.png', 
-    category: 'sport'
+    category: 'elektronik' 
 }
 ];
 
@@ -97,7 +82,7 @@ for (var i = 0; i < products.length; i++) {
                          <div class="price_item col-xs-12 col-md-5">
                             <p>${products[i].price}</p>
                         </div>
-                    <div class="add_item col-sm-7">
+                    <div  col-sm-7">
                         <button class="add_item" id="${i}"  type="submit">Lägg i Varukorg</button>
                     </div>
                 </div>
@@ -121,7 +106,7 @@ $(".add_item").click(function(){
 function displayCart() {
     cartText = " " ;
     for(var i=0; i < cart.length; i++ ) {
-        cartText += "<li><span class=\"name\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
+        cartText += "<li><span class=\"id\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
         +"</span> <span class=\"price\">" + cart[i].price + "</span>" + "<button id=\"" +i+ "\" class=\"done_item\" type=\"submit\">Done</button>" + 
         "<button id=\"" +i+ "\" class=\"delete_item\" type=\"submit\">Delete</button>" + "</li>";
     }
