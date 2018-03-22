@@ -69,6 +69,11 @@ body {
     height: 123%;
     width: 93%;
 }
+.cart_list table .item  .item_images_cart {
+    max-height: 50px;
+    margin-right: 10px;
+}
+  
 
 .category .products .item .item_description {
     
