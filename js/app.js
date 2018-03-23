@@ -101,17 +101,11 @@ $(".add_item").click(function(){
     var product = products[id];
     cart.push(product);
     displayCart();
-    $('span.amount').text(cart.length);
-    $(location).append(item);
 });
 
 function displayCart() {
     cartText = " " ;
     for(var i=0; i < cart.length; i++ ) {
-    //    cartText += "<li><span class=\"id\">" + cart[i].name + "</span> <span class=\"description\">" + cart[i].description 
-    //    +"</span> <span class=\"price\">" + cart[i].price + "</span>"  + 
-      //  "<button id=\"" +i+ "\" class=\"delete_item\" type=\"submit\">Delete</button>" + "</li>";
-    
     cartText += `
     <div>
         <table class="table">
@@ -160,14 +154,16 @@ function displayCart() {
                   </tr>
                 </tbody>
               </table>
-</div>` 
-$('span.amount').text(array.length);}
+</div>` }
     $(".cart_list").html(cartText);
+    //
+    $('.cart-length').text(cart.length);
 }
 $('.shopping_list').on('click', '.delete_item', function (e) {
     var id = $(this).attr("id");
     cart.splice(id, 1);
     displayCart();
+    
 });
 
 
