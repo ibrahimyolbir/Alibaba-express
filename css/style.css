@@ -20,6 +20,46 @@ body{
   background: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
 }
+.btn_kassan {
+    float: right;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    width: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .btn_kassan span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn_kassan span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn_kassan:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn_kassan:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 #yukari{
     z-index:100;    
     position:fixed;
