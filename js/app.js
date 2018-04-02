@@ -2,68 +2,21 @@ $(document).ready(function(){
 
 
 var cart = [];
+$.getJSON("js/products.json", function(result) {
 
-var products = [
-{   
-    name : "Samsung", 
-    price : "2220:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.", 
-    picture:'img/samsungtv.png',  
-    category: 'elektronik' 
-},
-{   
-    name : "Sony", 
-    price : "2220:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    picture: 'img/sonytv.png', 
-    category: 'elektronik'
- },
+  
+    var electronic = result.electronic;
+    var klader = result.klader;
+    var leksaker = result.leksaker;
+    var phones = result.phones;
 
-{   
-    name : "Nike", 
-    price : "620:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    picture: 'img/nikeshoes.png',    
-    category: 'elektronik' 
-},
-{
-    name : "Adidas", 
-    price : "120:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    picture: 'img/adidastshirt.png', 
-    category: 'elektronik' 
-},
-    
-{   
-    name : "Lego City", 
-    price : "520:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    picture: 'img/lego_city.png', 
-    category: 'elektronik'
-},
-{   
-    name : "Monopoly", 
-    price : "320:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    picture: 'img/monopoly.png', 
-    category: 'elektronik' 
-},
-    
-{   
-    name : "Iphone", 
-    price : "8920:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    picture: 'img/iphone.png', 
-    category: 'elektronik'
-},
-{   
-    name : "Asus", 
-    price : "5220:-", 
-    description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    picture: 'img/asus.png', 
-    category: 'elektronik' 
-}
-];
+    displayProduct(electronic,"electronic");
+    displayProduct(klader,"klader");
+    displayProduct(leksaker,"leksaker");
+    displayProduct(phones,"phones");
+});
+function displayProduct(products, targetProducts){
+
 
 var productText = "<ul class=\"product_list\">" ;
 for (var i = 0; i < products.length; i++) {
@@ -83,7 +36,7 @@ for (var i = 0; i < products.length; i++) {
                             <p>${products[i].price}</p>
                         </div>
                     <div  col-sm-7">
-                        <button class="add_item" id="${i}"  type="submit">Lägg i Varukorg</button>
+                        <button class="btn-primary" class="add_item" id="${i}"  productType="${targetProducts}" type="submit">Lägg i Varukorg</button>
                     </div>
                 </div>
                 </div>
@@ -93,12 +46,20 @@ for (var i = 0; i < products.length; i++) {
 
 productText += "</ul>";
 
-$(".products").html(productText);
 
+$("." +targetProducts).html(productText);
+}
 $(".add_item").click(function(){
     var id = $(this).attr("id");
-    
-    var product = products[id];
+    var productType = $(this).attr("productType");
+
+    var product = "" ;
+    if(productType == "klader"){
+         product = klader[id];
+    }else if(productType == "electronic")
+    {
+        product = electronic[id];
+    }
     cart.push(product);
     displayCart();
 });

@@ -146,12 +146,12 @@ body{
     margin-left: 118px;
 }
 
-.category .products ul {
+.category  ul {
     display: flex;
     flex-wrap: wrap;
 }
 
-.category .products .item {
+.category  .item {
     width: 220px;
     height: 380px;
     background-color: white;
@@ -160,13 +160,13 @@ body{
     padding: 25px;
 }
 
-.category .products .item .item_images {
+.category   .item .item_images {
     margin-bottom: 34px;
     height: 40%;
     width: 100%;
 }
 
-.category .products .item .item_images img {
+.category  .item .item_images img {
     height: 123%;
     width: 93%;
 }

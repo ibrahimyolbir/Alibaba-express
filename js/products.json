@@ -1,0 +1,72 @@
+{
+    "electronic" :[
+     {
+        "name" : "Samsung", 
+        "price" : "2220:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.", 
+        "picture":"img/samsungtv.png",  
+        "category": "electronic" 
+    },
+    {   
+        "name" : "Sony", 
+        "price" : "2220:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "picture": "img/sonytv.png", 
+        "category": "electronic"
+    }
+] ,
+    "klader" : [
+     {    
+        "name" : "Nike", 
+        "price" : "620:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "picture": "img/nikeshoes.png",    
+        "category": "klader" 
+        
+    },
+    {
+        "name" : "Adidas", 
+        "price" : "120:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "picture": "img/adidastshirt.png", 
+        "category": "klader" 
+    }
+],
+    "leksaker" : [
+    {  
+        "name" : "Lego City", 
+        "price" : "520:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+        "picture": "img/lego_city.png", 
+        "category": "leksaker"
+
+    },
+    {
+        "name" : "Monopoly", 
+        "price" : "320:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+        "picture": "img/monopoly.png", 
+        "category": "leksaker" 
+    
+
+    }
+],
+    "phones" :[
+    {
+        "name" : "Iphone", 
+        "price" : "8920:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+        "picture": "img/iphone.png", 
+        "category": "phones"
+
+    },
+    {
+        "name" : "Asus", 
+        "price" : "5220:-", 
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+        "picture": "img/asus.png", 
+        "category": "phone"
+    }
+]
+
+}
