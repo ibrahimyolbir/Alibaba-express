@@ -36,7 +36,7 @@ for (var i = 0; i < products.length; i++) {
                             <p>${products[i].price}</p>
                         </div>
                     <div  col-sm-7">
-                        <button class="btn-primary" class="add_item" id="${i}"  productType="${targetProducts}" type="submit">Lägg i Varukorg</button>
+                        <button class="add_item" id="${i}"  productType="${targetProducts}" type="submit">Lägg i Varukorg</button>
                     </div>
                 </div>
                 </div>
@@ -48,8 +48,11 @@ productText += "</ul>";
 
 
 $("." +targetProducts).html(productText);
-}
+
+
+}   
 $(".add_item").click(function(){
+  
     var id = $(this).attr("id");
     var productType = $(this).attr("productType");
 
@@ -61,8 +64,9 @@ $(".add_item").click(function(){
         product = electronic[id];
     }
     cart.push(product);
-    displayCart();
+    displayCart();   
 });
+
 
 function displayCart() {
     cartText = " " ;
